@@ -16,7 +16,7 @@
 #include "WProgram.h"
 #endif
 
-#define serialAT Serial3
+#define serialAT Serial2
 #define serialMON Serial
 
 class sim5320
