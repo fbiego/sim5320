@@ -25,8 +25,8 @@ void sim5320::begin(byte rst,  unsigned int baud){
     RST = rst;
     BAUD = baud;
     pinMode(RST, OUTPUT);
-    //serialAT.begin(BAUD);
-	serialAT.begin(BAUD, SERIAL_8N1, RXD1, TXD1);
+    serialAT.begin(BAUD);
+	//serialAT.begin(BAUD, SERIAL_8N1, RXD1, TXD1);
 }
 
 String sim5320::getModemInfo(){
