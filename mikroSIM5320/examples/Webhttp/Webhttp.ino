@@ -1,8 +1,8 @@
 #include <sim5320.h>
 
-sim5320 sim(25, 9600);
+sim5320 sim(25, 115200);
 unsigned long cur_time, old_time;
-String host = "vsh.pp.ua";
+String host = "hydrate2.acmegh.com";
 
 void setup() {
   // put your setup code here, to run once:
@@ -20,7 +20,7 @@ void loop() {
 
   cur_time = millis();
   if ( cur_time - old_time >= 5000){
-    String url = "/TinyGSM/logo.txt\r"; 
+    String url = "/api/v2/water/balance?serial_number=18543230135\r"; 
     if(!sim.pushHTTP(host, url)){
       Serial.println("fail post");
     }
